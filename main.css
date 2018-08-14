@@ -68,6 +68,7 @@ a {
 
 /*SECTION;*/
 .section-form {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
     grid-column-start: 9;
     grid-column-end: 13;
     background: rgba(0, 0, 0, 0.4);
@@ -131,6 +132,37 @@ a {
     font-family: monospace;
 }
 
+/*CONTACT CARD*/
+.card {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    max-width: 30rem;
+    text-align: center;
+    margin: 5rem auto;
+    color: black;
+    background: white;
+}
+
+.card h1 {
+    font-size: 2.1rem;
+}
+
+.card .title {
+    font-size: 1.8rem;
+}
+
+.card > button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #000;
+    color: white;
+    border: none;
+    position: relative;
+    top: 1.3rem;
+}
 
 @media (max-width: 768px) {
     .section-form {
@@ -139,6 +171,7 @@ a {
         width: 100%;
     }
     
+    
     body {
        background-position: right;
         background-size: auto;
@@ -146,4 +179,30 @@ a {
     
     .header__nav > li {
         font-size: 1.6rem;
+    }
+    
+    
+    .card {
+        grid-column: span 12;
+
+    }
+    
+/*
+    .section-form {
+        grid-row-start: 3;
+        grid-column-start: 3;
+        grid-column-end: 11;
+        
+    }
+*/
+    
+    @media (max-width: 320px) {
+        .card, .card img {
+            max-width: 25rem;
+        }
+        
+        .section-form {
+            grid-column: span 12;
+            margin: auto;
+        }
     }
